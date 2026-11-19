@@ -20,12 +20,11 @@ d1 = {'a': 100, 'b': 200, 'c': 300}
 
 d2 = {'a': 300, 'b': 200, 'd': 400}
 
-result = d1.copy()
+for i in d1.keys():
+    if i in d2:
+        d1[i] += d2[i] 
 
-for key, value in d2.items():
-    result[key] = result.get(key, 0) + value
-
-print(result)
+print(d1)
 
 #question 4
 n = int(input("Enter a number: "))
